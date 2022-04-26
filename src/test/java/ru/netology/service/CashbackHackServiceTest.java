@@ -1,18 +1,17 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
-import static org.testng.Assert.*;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
-
     @Test
     public void sholdTestRemainZero() {
         CashbackHackService service = new CashbackHackService();
         int amount = 5000;
         int expected = 0;
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
-
+        assertEquals(expected, actual);
     }
     @Test
     public void sholdTestRemainZero1() {
@@ -20,7 +19,7 @@ public class CashbackHackServiceTest {
         int amount = 1000;
         int expected = 0;
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -29,7 +28,8 @@ public class CashbackHackServiceTest {
         int amount = 4700;
         int expected = 300;
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual
+        );
     }
     @Test
     public void sholdTestRemain() {
@@ -37,7 +37,7 @@ public class CashbackHackServiceTest {
         int amount = 0;
         int expected = 1000;
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @Test
     public void sholdTestRemainNegative() {
@@ -45,7 +45,7 @@ public class CashbackHackServiceTest {
         int amount = -2000;
         int expected = 0;
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @Test
     public void sholdTestRemainNegative1() {
@@ -53,6 +53,6 @@ public class CashbackHackServiceTest {
         int amount = -1500;
         int expected = 0;
         int actual = service.remain(amount);
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 }
